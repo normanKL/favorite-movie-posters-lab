@@ -1,0 +1,178 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height for HTML and body */
+    /* background-color: rgb(170, 170, 170); */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #716f6f;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent body overflow */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Ensure container fills the viewport height */
+    max-width: 1800px; /* Optional: Limit the maximum width */
+    box-sizing: border-box; /* Include padding in total width */
+    /* background-color: blue; */ 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.poster-container {
+    flex: 1; /* Allow this container to grow and fill available space */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between posters */
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling if necessary */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+.poster {
+    width: 100%; /* Ensure poster takes full width of grid cell */
+    height: 350px;
+    perspective: 1000px;
+    border: 10px inset transparent;
+    border-radius: 20px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin to separate from the next poster */
+    margin-top: 20px;
+}
+
+.poster:hover {
+    border-color: rgb(73, 172, 248);
+}
+
+.poster-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.poster-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.poster-front, .poster-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box; /* Ensure padding and borders are included in the size */
+}
+
+.poster-front {
+    background-size: cover;
+    background-position: center;
+}
+
+.poster-back {
+    background-color: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 10px; /* Use padding to control the internal spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.poster-back img {
+    margin: 5px 20px 0px 20px;
+    width: auto;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.poster-back h3 {
+    font-size: 20px;
+}
+
+.poster-back p {
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px 10px 10px 10px;
+    text-align: left;
+}
+
+.select-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.select-button:hover {
+    background-color: #2980b9;
+}
+
+.selected-movies-container {
+    width: 300px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Ensure content is displayed vertically */
+    position: sticky; /* Stick to the top of the viewport */
+    top: 20px; /* Distance from the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    max-height: calc(100vh - 40px); /* Limit maximum height to avoid overflow */
+    overflow-y: auto; /* Allow scrolling if the list is too long */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.selected-movies-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#selected-movies-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    flex-grow: 1; /* Ensures the list takes up available vertical space */
+}
+
+#selected-movies-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #b2b3b5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#selected-movies-list li img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#selected-movies-list li p {
+    margin: 0;
+}
