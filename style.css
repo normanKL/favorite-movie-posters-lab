@@ -88,13 +88,15 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .poster-back img {
     margin: 5px 20px 0px 20px;
-    width: auto;
+    width: 50%;
     height: 50%;
     border-radius: 10px;
+
 }
 
 .poster-back h3 {
@@ -102,10 +104,9 @@ body {
 }
 
 .poster-back p {
-    font-size: 10px;
+    font-size: 12px;
     margin: 0px;
-    padding: 0px 10px 10px 10px;
-    text-align: left;
+    padding: 0px 10px 5px 10px;
 }
 
 .select-button {
