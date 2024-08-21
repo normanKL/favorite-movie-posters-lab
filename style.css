@@ -147,7 +147,7 @@ body {
 
 .selected-movies-container h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 23px;
     margin-bottom: 20px;
 }
 
@@ -162,18 +162,19 @@ body {
 #selected-movies-list li {
     margin-bottom: 10px;
     padding: 10px;
-    border: 2px solid #b2b3b5;
+    border: 2px solid #558bf7;
     border-radius: 5px;
     display: flex;
     align-items: center;
 }
 
 #selected-movies-list li img {
-    width: 50px;
-    height: auto;
+    width: 25%;
+    height: 25%;
     margin-right: 10px;
 }
 
 #selected-movies-list li p {
     margin: 0;
+    font-size: 15px;
 }

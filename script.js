@@ -196,7 +196,7 @@ posters.forEach(poster => {
              <img src="${poster.imageUrl}" alt="movie poster">
              <p><strong>${poster.title}</strong><br>
              Genre: ${poster.genre}<br>
-             Released: ${poster.releasedDate}<br>
+             Release Date: ${poster.releaseDate}<br>
              Rating: ${poster.rating}</p>
          `;
 
