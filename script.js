@@ -25,7 +25,7 @@ const posters = [
         genre: "Horror",
         releaseDate: "1999-07-23",
         rating: "6.5/10",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BNWIyNjM5M2EtNjJmNS00ZjQwLWI4NjYtNGRkYTM0OTlkYjU2XkEyXkFqcGdeQXVyNzg4NDEyNDk@._V1_FMjpg_UX1000_.jpg"
+        imageUrl: "https://asianwiki.com/images/7/7e/Nangnak.jpg"
     },
     {
         title: "Children of Heaven",
@@ -39,7 +39,7 @@ const posters = [
         genre: "Romance",
         releaseDate: "1997-05-31",
         rating: "7.7/10",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BMWQxNjY2MjItZjEwYS00OGJhLTg1ODctZGM4NzM3ODU2ZTFiXkEyXkFqcGdeQXVyMTU3NDU4MDg2._V1_.jpg"
+        imageUrl: "https://asianwiki.com/images/8/86/Happytogether.jpg"
     },
     {
         title: "Roh",
